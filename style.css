@@ -1,16 +1,22 @@
+/* TOP NAVBAR OF THE LANDING PAGE */
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
+/* DISPLAYING THE TOP NAVBAR IN A STRAIGHT LINE */
 ul li {
     display: inline;
     float: left;
 }
 
+/* SETTING COLORS TO THE TOP NAVBAR LINKS, PADDING AND REMOVING THE UNDERLINE AT THE BOTTOM OF THE NAVBAR */
 ul li a {
     display: block;
     color: white;
@@ -19,6 +25,18 @@ ul li a {
     text-decoration: none;
 }
 
+/* SETTING COLOR OF BACKGROUND WHEN YOU HOVER */
 ul li a:hover{
     background-color: #111;
+}
+
+/* SETS COLOR OF LINK WHEN ACTIVE */
+ul li a.active {background-color: #04AA6D;}
+
+ul li.right {float: right;}
+
+/* MAKING THE APP TOPBAR ALIGN IN A DOWNWARD WAY WHEN THE SIZE OF SCREEN REDUCES */
+@media screen and (max-width: 600px) {
+  ul li.right, 
+  ul li {float: none;}
 }
